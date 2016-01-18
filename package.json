@@ -1,0 +1,14 @@
+{
+  "name": "snowman-in-the-snow",
+  "version": "0.1.0",
+  "description": "Snowman in the snow animation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sompop Suksawat (ssuksawat21@gmail.com)",
+  "license": "",
+  "dependencies": {
+    "node-static": "^0.7.7"
+  }
+}
