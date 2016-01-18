@@ -151,3 +151,10 @@ body {
 }
 #signature a         { color: #bdc3c7; }
 #signature a:visited { color: #95a5a6; }
+
+/***** Override Position Offset for Mobile *****/
+
+@media (max-width: 480px) {
+  #snowman { right: 100px; }
+  #moon    { left:  100px; }
+}
