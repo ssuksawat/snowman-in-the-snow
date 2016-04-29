@@ -1,0 +1,160 @@
+/***** Global Styles *****/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #020304, #5f83a7);
+  overflow: hidden;
+  font-family: sans-serif;
+  color: #ecf0f1;
+}
+
+
+/***** Snow Styling *****/
+
+.snow {
+  position: absolute;
+  z-index: 50;
+  border-radius: 50%;
+  background: white;
+  top: 0;
+  left: 0;
+}
+.snow--1 {
+  width: 1px;
+  height: 1px;
+}
+.snow--2 {
+  width: 2px;
+  height: 2px;
+}
+.snow--3 {
+  width: 3px;
+  height: 3px;
+}
+.snow--4 {
+  width: 4px;
+  height: 4px;
+}
+
+/***** Moon Styling *****/
+
+#moon {
+  position: absolute;
+  top: 30px;
+  left: 180px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 0 0 #ecf0f1;
+  -webkit-filter: drop-shadow(0 0 20px rgb(253,246,219));
+  filter: drop-shadow(0 0 20px rgb(253,246,219));
+}
+
+/***** Snowman Styling *****/
+
+#snowman {
+  position: fixed;
+  z-index: 100;
+  right: 300px;
+  bottom: 200px;
+  -webkit-filter: drop-shadow(-5px -5px 30px rgba(255,255,255,.9));
+  filter: drop-shadow(-5px -5px 30px rgba(255,255,255,.9));
+}
+#snowman > div {
+  position: absolute;
+  background-color: #ecf0f1;
+  border-radius: 50%;
+}
+#snowman .head {
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 30px;
+  height: 30px;
+  box-shadow: -1px -1px 5px 0 rgba(0,0,0,.4) inset;
+}
+#snowman .nose {
+  position: absolute;
+  z-index: 90;
+  top: 5px;
+  left: -5px;
+  width: 0;
+	height: 0;
+  background: none;
+	border-top: 5px solid transparent;
+	border-right: 10px solid orange;
+	border-bottom: 5px solid transparent;
+  transform: rotate(30deg);
+  -webkit-filter: drop-shadow(0 1px 2px orange);
+  filter: drop-shadow(0 1px 2px orange);
+}
+#snowman .torso {
+  top: 25px;
+  left: -10px;
+  z-index: 100;
+  width: 50px;
+  height: 50px;
+  box-shadow: -5px -5px 5px 0 rgba(0,0,0,.5) inset;
+}
+#snowman .torso:after {
+  position: absolute;
+  bottom: -3px;
+  right: -18px;
+  content: "";
+  width: 40px;
+  height: 5px;
+  background: rgba(0,0,0,.5);
+  box-shadow: 0px 0px 15px 0 rgba(0,0,0,.5);
+  border-radius: 50%;
+  transform: rotate(3deg);
+}
+
+/***** Hills Styling *****/
+
+.hill {
+  position: fixed;
+  width: 1800px;
+  height: 600px;
+  border-radius: 50%;
+}
+.hill--1 {
+  z-index: 100;
+  right: -1000px;
+  bottom: -420px;
+  background-image: linear-gradient(to bottom, rgb(120,150,181), rgb(8,31,47));
+  box-shadow: 5px 5px 60px 10px rgb(235,245,252) inset;
+}
+.hill--2 {
+  position: fixed;
+  z-index: 90;
+  left: -1000px;
+  bottom: -350px;
+  background-image: linear-gradient(to bottom, rgb(44,62,80), rgb(23,23,23));
+  box-shadow: 0 -5px 60px rgba(255,255,255,.4);
+}
+
+/***** Signature *****/
+
+#signature {
+  position: absolute;
+  z-index: 200;
+  left: 5px;
+  bottom: 5px;
+  font-size: .75em;
+}
+#signature a         { color: #bdc3c7; }
+#signature a:visited { color: #95a5a6; }
+
+/***** Override Position Offset for Mobile *****/
+
+@media (max-width: 480px) {
+  #snowman { right: 100px; }
+  #moon    { left:  100px; }
+}
